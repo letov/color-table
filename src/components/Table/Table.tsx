@@ -17,7 +17,7 @@ const Table: FC<TableProps> = () => {
       >
           {
               range.map((index) => (
-                <Box index={index}/>
+                <Box key={index} index={index}/>
               ))
           }
       </div>
