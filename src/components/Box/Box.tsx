@@ -11,7 +11,9 @@ const Box: FC<BoxProps> = ({ index }: BoxProps) => {
     const boxState = useSelector((state: RootState) => state.table[index]);
 
     if (!boxState.visible) {
-        return null;
+        return (
+            <div className="box"></div>
+        );
     }
 
     const valueToColor = (value: number): RGB => {

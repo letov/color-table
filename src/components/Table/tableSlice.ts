@@ -18,7 +18,19 @@ const initialState: TableState = Array.from({ length: COLUMNS_NUMBER * ROW_NUMBE
 export const tableSlice = createSlice({
   name: 'table',
   initialState,
-  reducers: {},
+  reducers: {
+      allVisible: (state) => {
+          state.map(box => box.visible = true)
+      },
+      positiveVisible: (state) => {
+          state.map(box => box.visible = box.value > 0)
+      },
+      negativeVisible: (state) => {
+          state.map(box => box.visible = box.value < 0)
+      },
+  },
 })
+
+export const { allVisible, positiveVisible, negativeVisible } = tableSlice.actions
 
 export default tableSlice.reducer

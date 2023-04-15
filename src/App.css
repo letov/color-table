@@ -6,14 +6,26 @@
   display: grid;
   grid-gap: 10px;
   background-color: #444;
-  color: #444;
   border-radius: 5px;
   padding: 10px;
-  margin: 10px 100px 100px;
+  margin: 10px 100px 20px;
 }
 
 .box {
   color: #fff;
   border-radius: 5px;
   padding: 2px;
+}
+
+.filter__wrapper {
+  display: flex  ;
+  grid-gap: 10px;
+  justify-content: center;
+}
+
+.button {
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  width: 80px;
 }
